@@ -27,7 +27,9 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "GPBMetadata\\": "generated/GPBMetadata",
+            "Grpc\\": "generated/Grpc"
         }
     },
     "autoload-dev": {
