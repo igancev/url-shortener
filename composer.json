@@ -64,5 +64,8 @@
             "allow-contrib": false,
             "require": "6.3.*"
         }
+    },
+    "require-dev": {
+        "spiral/roadrunner-cli": "^2.5"
     }
 }
