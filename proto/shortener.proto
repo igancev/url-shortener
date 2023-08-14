@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package grpc.shortener;
+
+message LongUrl {
+  string url = 1;
+}
+
+message ShortUrl {
+  string url = 1;
+}
+
+service UrlShortener {
+  rpc shorten (LongUrl) returns (ShortUrl) {
+  }
+}
