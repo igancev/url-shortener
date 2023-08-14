@@ -1,0 +1,12 @@
+# ./docker-compose.yml
+version: '2'
+
+services:
+  rr:
+    build:
+      dockerfile: ./deployment/docker/roadrunner/Dockerfile
+    ports:
+      - '9001:9001' # шарим порт 9001
+    user: '1000:1000' # работа от текущего юзера в системе
+    volumes:
+      - ./:/app # монтируем проект в /app
