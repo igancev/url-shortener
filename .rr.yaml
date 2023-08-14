@@ -5,16 +5,10 @@ server:
   env:
     - APP_RUNTIME: Baldinof\RoadRunnerBundle\Runtime\Runtime
 
-http:
-  address: 0.0.0.0:8080
-  pool:
-    debug: false
-  middleware: [ "static", "gzip" ]
-  uploads:
-    forbid: [ ".php", ".exe", ".bat" ]
-  static:
-    dir: "public"
-    forbid: [ ".php", ".htaccess" ]
+grpc:
+  listen: "tcp://0.0.0.0:9001"
+  proto:
+    - "proto/shortener.proto"
 
 logs:
   mode: production
